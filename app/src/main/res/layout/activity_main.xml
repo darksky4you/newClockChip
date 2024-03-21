@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.nextos.cccccccc.widget.AdvancedCardView
+        android:id="@+id/Officiall"
+        app:stroke_ColorType="gradient_linear"
+        app:stroke_Gradient_Color0="@color/border"
+        app:stroke_Gradient_ColorEnd="#5414CC"
+        app:cornerRadius="5dp"
+        app:background_Type="stroke"
+        app:background_ColorType="gradient_linear"
+        app:stroke_Width="1dp"
+        app:stroke_Color="@color/border"
+        app:background_Gradient_Color0="#355B4F"
+        app:background_Gradient_ColorEnd="#5414CC"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5.5dp"
+            android:paddingVertical="0.3dp"
+            android:format12Hour="hh:mm a"
+            android:format24Hour="hh:mm a"/>
+    </com.nextos.cccccccc.widget.AdvancedCardView>
+    <com.nextos.cccccccc.widget.xClockBG
+android:layout_below="@id/Officiall"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextClock
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5.5dp"
+            android:paddingVertical="0.3dp"
+            android:format12Hour="hh:mm a"
+            android:format24Hour="hh:mm a"/>
+    </com.nextos.cccccccc.widget.xClockBG>
+</RelativeLayout>
