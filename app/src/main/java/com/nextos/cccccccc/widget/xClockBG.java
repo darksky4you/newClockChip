@@ -11,8 +11,8 @@ import androidx.annotation.Nullable;
 import com.nextos.cccccccc.R;
 
 public class xClockBG extends AdvancedCardView{
-    int isCustomRadius , isBackgroundColorStyle , BgColor , BgColorEnd , xGradientAngle , isBackgroundStyle , xStrokeType, xStrokeWidth , xStrokeColor , xStrokeDash ,xStrokeGap , xStrockColorType , xStrokeColorEnd ,xStrokeGradientAngle;
-    float radius , radiusTopLeft , radiusTopRight , radiusBottomRight , radiusBottomLeft;
+    int isCustomRadius , isBackgroundColorStyle , BgColor , BgColorEnd ,  isBackgroundStyle , xStrokeType, xStrokeWidth , xStrokeColor , xStrokeDash ,xStrokeGap , xStrockColorType , xStrokeColorEnd ,xStrokeGradientAngle;
+    float xGradientAngle , radius , radiusTopLeft , radiusTopRight , radiusBottomRight , radiusBottomLeft;
 
     ContentResolver contentResolver = getContext().getContentResolver();
 
@@ -68,7 +68,6 @@ public class xClockBG extends AdvancedCardView{
             setBackground_Type(BackgroundType.Fill);
             xChipBackgroundColor();
         }
-
     }
     private void xChipBackgroundColor(){
         xGradientAngle = Settings.System.getInt(contentResolver , "chip_gradient_angle" , 0);
@@ -122,8 +121,8 @@ public class xClockBG extends AdvancedCardView{
 
         if (xStrokeType == 1) {
             setStroke_Type(StrokeType.Dash);
-            xStrokeDash = Settings.System.getInt(contentResolver , "chip_stroke_width" , 1);
-            xStrokeGap = Settings.System.getInt(contentResolver , "chip_stroke_width" , 1);
+            xStrokeDash = Settings.System.getInt(contentResolver , "chip_stroke_dash" , 1);
+            xStrokeGap = Settings.System.getInt(contentResolver , "chip_stroke_gap" , 1);
             setStroke_DashSize(xStrokeDash);
             setStroke_GapSize(xStrokeGap);
 
@@ -147,7 +146,7 @@ public class xClockBG extends AdvancedCardView{
             xStrokeGradientAngle = Settings.System.getInt(contentResolver , "chip_stroke_gradient_angle" , 0);
             int StrokeGradient [] = {xStrokeColor ,xStrokeColorEnd };
             setStroke_Gradient_Colors(StrokeGradient);
-            setBackground_Gradient_Angle(xStrokeGradientAngle);
+            setStroke_Gradient_Angle(xStrokeGradientAngle);
 
         }
         else {
